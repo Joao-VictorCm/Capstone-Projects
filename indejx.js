@@ -17,18 +17,20 @@ app.use(
   })
 );
 
-let anotacoes = [];
+let anotacao = []
 
 app.get('/', (req, res) => {
-    res.render('index', { anotacoes });
+    res.render("index.ejs");
 });
 
-app.post('/anotacoes', (req, res) => {
-    const novaNota = req.body.nota;
-    if (novaNota) {
-        anotacoes.push(novaNota);
-    }
-    res.render("index.ejs")
+app.post("/submit", (req, res) => {
+    const novaNota = req.body["nota1"]
+    console.log(novaNota)
+
+    anotacao.push(novaNota)
+    console.log(anotacao)
+
+    res.render("index.ejs", {teste: anotacao}, )
 });
 
 
@@ -36,3 +38,10 @@ app.post('/anotacoes', (req, res) => {
 app.listen(port, () =>{
     console.log(`servidor rodando na porta: ${port}`)
 })
+
+
+
+const ex = []
+ex.push("teste")
+
+console.log(ex)

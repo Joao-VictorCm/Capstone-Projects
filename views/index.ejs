@@ -1,15 +1,17 @@
 <%- include("partials/header.ejs") %> 
 
-<h1>Anotações</h1>
-<form action="/anotacoes" method="POST">
-    <input type="text" name="nota" placeholder="Digite sua anotação" required>
-    <button type="submit">Adicionar Anotação</button>
-</form>
-<ul>
-    <% anotacoes.forEach(function(nota) { %>
-        <li><%= nota %></li>
-    <% }); %>
+
+<ul></ul>
+    <% if(locals.teste) {%>
+        <p> <%= teste %></p>
+    <% }else{ %>
+        <p>Escreva sua nota</p>
+    <% } %>
 </ul>
-    
+
+<form action="/submit" method="post">
+  <input type="text" name="nota1" />
+  <input type="submit" value="ok" />
+</form>
 
 <%- include("partials/footer.ejs") %>
