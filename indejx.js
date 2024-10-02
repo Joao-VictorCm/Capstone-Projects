@@ -17,15 +17,21 @@ app.use(
   })
 );
 
+let anotacoes = [];
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
+    res.render('index', { anotacoes });
+});
+
+app.post('/anotacoes', (req, res) => {
+    const novaNota = req.body.nota;
+    if (novaNota) {
+        anotacoes.push(novaNota);
+    }
     res.render("index.ejs")
-})
+});
 
-app.post("/submit", (req, res) => {
-    const text1 = req.body["nota1"]
-    res.render("index.ejs", {post1 : text1})
-})
+
 
 app.listen(port, () =>{
     console.log(`servidor rodando na porta: ${port}`)
