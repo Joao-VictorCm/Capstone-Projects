@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %> 
+
+<% if(locals.post1){ %>
+<h1><%= post1 %></h1>
+<% } else{%>
+    <h1>Excreva sua anotação</h1>
+    <% } %>
+
+<form action="/submit" method="post">
+  <input type="text" name="nota1" />
+  <input type="submit" value="ok" />
+</form>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,24 @@
+{
+  "name": "capstone-projects",
+  "version": "1.0.0",
+  "description": "beta",
+  "main": "indejx.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joao-VictorCm/Capstone-Projects.git"
+  },
+  "author": "João Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joao-VictorCm/Capstone-Projects/issues"
+  },
+  "homepage": "https://github.com/Joao-VictorCm/Capstone-Projects#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  }
+}
