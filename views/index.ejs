@@ -3,16 +3,23 @@
 
 <ul>
     <% if(locals.teste) {%>
-       <% teste.forEach((list) => { %>
-        <li> <p><%= list %></p> </li>
-       <% }) %>
+       <% teste.forEach((item, index) =>{ %>
+
+
+        <li id="<%= index +1 %>">
+
+            <%= item %>
+        </li>
+       <%}) %>
+
+
     <% }else{ %>
         <p>Escreva sua nota</p>
     <% } %>
 </ul>
 
 <form action="/submit" method="post">
-  <input type="text" name="nota1" />
+  <input type="text" name="nota1">
   <input type="submit" value="ok" />
 </form>
 

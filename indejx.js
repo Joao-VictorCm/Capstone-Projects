@@ -25,14 +25,18 @@ app.get('/', (req, res) => {
 
 app.post("/submit", (req, res) => {
     const novaNota = req.body["nota1"]
-    console.log(novaNota)
+    // console.log(novaNota)
 
-    anotacao.push(novaNota)
+    anotacao.push(novaNota).for
 
     res.render("index.ejs", {teste: anotacao})
 
-    console.log(req.body.teste)
 });
+ 
+
+app.patch("/submit", (req, res) =>{
+    console.log(item.id)
+ })
 
 
 app.listen(port, () =>{
