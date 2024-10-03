@@ -1,9 +1,11 @@
 <%- include("partials/header.ejs") %> 
 
 
-<ul></ul>
+<ul>
     <% if(locals.teste) {%>
-        <p> <%= teste %></p>
+       <% teste.forEach((list) => { %>
+        <li> <p><%= list %></p> </li>
+       <% }) %>
     <% }else{ %>
         <p>Escreva sua nota</p>
     <% } %>

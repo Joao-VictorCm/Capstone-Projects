@@ -28,20 +28,14 @@ app.post("/submit", (req, res) => {
     console.log(novaNota)
 
     anotacao.push(novaNota)
-    console.log(anotacao)
 
-    res.render("index.ejs", {teste: anotacao}, )
+    res.render("index.ejs", {teste: anotacao})
+
+    console.log(req.body.teste)
 });
-
 
 
 app.listen(port, () =>{
     console.log(`servidor rodando na porta: ${port}`)
 })
 
-
-
-const ex = []
-ex.push("teste")
-
-console.log(ex)
