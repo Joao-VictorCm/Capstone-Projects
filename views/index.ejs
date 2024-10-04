@@ -6,20 +6,19 @@
        <% teste.forEach((item, index) =>{ %>
 
 
-        <li id="<%= index +1 %>">
+        <li id="item <%= index +1 %>">
 
-            <%= item %>
+            <p><%= item %> ID: <%= index + 1 %></p>
         </li>
        <%}) %>
-
-
+       
     <% }else{ %>
         <p>Escreva sua nota</p>
     <% } %>
 </ul>
 
 <form action="/submit" method="post">
-  <input type="text" name="nota1">
+  <input type="text" name="nota1" id="<% teste.item%>">
   <input type="submit" value="ok" />
 </form>
 
