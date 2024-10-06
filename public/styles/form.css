@@ -1,0 +1,23 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+}
+
+.form-post{
+    display: flex;
+    align-items: center
+}
+
+.form-actions {
+    width: 550px;
+    justify-content: center;
+    margin-left: auto; 
+    margin-right: auto;
+    
+}
+
+.bi-trash3-fill {
+  color: rgb(230, 10, 10);
+  size: 45px;
+  height: 25px;
+}

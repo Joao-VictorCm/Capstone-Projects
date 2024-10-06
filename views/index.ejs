@@ -1,25 +1,30 @@
 <%- include("partials/header.ejs") %> 
 
 
-<ul>
-    <% if(locals.teste) {%>
-       <% teste.forEach((item, index) =>{ %>
+<nav class="form-actions">
+    <div class="container-fluid">
+      <form class="form-post" action="/submit" method="post">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"  name="nota1">
+        <button class="btn btn-outline-success" type="submit">Submit</button>
+      </form>
+    </div>
 
-
-        <li id="item <%= index +1 %>">
-
-            <p><%= item %> ID: <%= index + 1 %></p>
-        </li>
-       <%}) %>
-       
-    <% }else{ %>
-        <p>Escreva sua nota</p>
-    <% } %>
-</ul>
-
-<form action="/submit" method="post">
-  <input type="text" name="nota1">
-  <input type="submit" value="ok" />
-</form>
+    <ol class="list-group list-group-numbered">
+        <% if(locals.teste) {%>
+            <% teste.forEach((item, index) =>{ %>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Tarefa <%= index +1 %></div>
+            <p><%= item %></p>
+          </div>
+          <span class="badge text-bg-primary rounded-pill"id="item ">
+          <i class="bi bi-trash3-fill" type="button" action="delete"></i>
+          <%}) %>
+        </li> 
+        <% }else{ %>
+            <h1>Nanhum item na sua lista de anotações</h1>
+        <% } %>
+    </ol>
+</nav>
 
 <%- include("partials/footer.ejs") %>
